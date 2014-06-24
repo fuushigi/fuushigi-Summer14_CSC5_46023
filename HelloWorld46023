@@ -1,0 +1,20 @@
+/* 
+ * File:   main.cpp
+ * Author: Quintos, Tracy "Hello World!" 46023
+ *
+ * Created on June 23, 2014, 11:10 PM
+ */
+
+#include <iostream>
+
+using namespace std;
+
+/*
+ * 
+ */
+int main() {
+    cout << "Hello World!" << endl;
+
+    return 0;
+}
+
