@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
- * Author: 
- *
+ * Author: Tracy Quintos 
+ * Purpose: Homework Gaddis7thEdChp2Prob8 
  * Created on June 26, 2014, 11:24 AM
  */
 
