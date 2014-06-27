@@ -1,8 +1,9 @@
 /* 
  * File:   main.cpp
- * Author: OWNER-PC
- *
+ * Author: Tracy Quintos
  * Created on June 26, 2014, 7:18 AM
+ * Purpose:  * Purpose: Homework Gaddis7thEdChp2Prob5
+
  */
 
 #include <iostream>
