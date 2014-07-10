@@ -1,23 +1,31 @@
 /* 
  * File:   main.cpp
- * Author: rcc
- *
+ * Author: Tracy Quintos
  * Created on July 10, 2014, 1:12 PM
+ * Purpose: Homework Gaddis7thEdChp5Prob11
  */
 
+//User Libraries
 #include <iostream>
 
 using namespace std;
 
+//User Libraries
+
+// Global Constant
+
+//Function Prototype
+
+//Execution starts here!
 /*
  * 
  */
 int main(int argc, char** argv) {
     
-    int organism1; //holds the starting number of organisms
-    int percentageG; //the percentage growth
-    int daysMulti; //number of days to multiply
-    int organism2; // calculated growth of organism
+    float organism1; //holds the starting number of organisms
+    float percentageG; //the percentage growth
+    float daysMulti; //number of days to multiply
+    float organism2; // calculated growth of organism
     
     
     cout<<"Please enter the number of original numbers of organisms";
@@ -27,11 +35,14 @@ int main(int argc, char** argv) {
     cout<<"Please enter the number of days organisms will grow";
     cin>>daysMulti;
     
-     daysMulti= 1;
+     daysMulti= 1; //starting day of multiplying organisms
             
     
-    while (daysMulti <=20)
+    while (daysMulti <=20) // days of multiplying 
+        
     {
+        //Calculating new growth by multiplying original # of organism
+        // by % of growth multiplied by the days it will have grown in 
         organism2 = (organism1 * percentageG * daysMulti);
         
         cout<<" In "<<daysMulti<<" days ";
@@ -41,7 +52,6 @@ int main(int argc, char** argv) {
             
     
     
-
+    //Exit stage right 
     return 0;
 }
-
