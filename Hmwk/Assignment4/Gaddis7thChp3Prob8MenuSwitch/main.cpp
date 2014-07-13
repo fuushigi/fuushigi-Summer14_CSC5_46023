@@ -59,7 +59,7 @@ int main(int argc, char** argv)
         case 4: cout<<"End Quintos Tutor, Have a nice day! =)"<<endl;
         break;
         
-        }while(choice!=0);
+        }
 	cout << "What is your answer?"<<endl;
 	cin >> answer;
 	
