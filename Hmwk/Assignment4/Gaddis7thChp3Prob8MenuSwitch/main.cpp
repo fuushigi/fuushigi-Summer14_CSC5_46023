@@ -60,8 +60,10 @@ int main(int argc, char** argv)
         break;
         
         }
-	cout << "What is your answer?"<<endl;
-	cin >> answer;
+	if(choice!=4){
+cout<<"what is your answer"<<endl;
+}
+cin >> answer;
 	
         // if statement, the answer of user must be equal to the result of each question
 	if (answer == result)
