@@ -27,11 +27,11 @@ int choice; //holds the options to choose from
 int hours;
 float total;
 //holds the charge it costs monthly and the additional fees for going over usage
-int A = 19.95;
-int B = 24.95;
-int C = 29.95;
-int D = 2.00;
-int E = 1.00;
+float A = 19.95;
+float B = 24.95;
+float C = 29.95;
+float D = 2.00;
+float E = 1.00;
 
 //displays the monthly charges and also the additional hour charges
 //user is then asked to choose a package
