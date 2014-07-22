@@ -303,6 +303,7 @@ while(startGame) //if choice 1 is selected the game will start using a WHILE loo
     
 																cout<<"Enter name.\n";
 																cout<<"Contestant: ";
+																cin>>name1;
 																getline(cin,name1);
     
 																outputFile<<name1<<endl;
