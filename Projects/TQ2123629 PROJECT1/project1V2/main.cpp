@@ -308,6 +308,7 @@ while(startGame) //if choice 1 is selected the game will start using a WHILE loo
     
 																outputFile<<name1<<endl;
 																outputFile.close();
+																break;
                                                             }
                                                             else //else statements is used for when user enters in the wrong answer
                                                             {   //every question will have an else stament counterpart, allocating the prize money as well as ending the game.
