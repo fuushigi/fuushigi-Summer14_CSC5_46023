@@ -1,49 +1,40 @@
-/*
-* File: main.cpp
-* Author: Tracy Quintos
-* Created on July 10, 2014, 12:32 AM\
-* Purpose: Homework Gaddis7thChp5Prob12
-*/
+/* 
+ * File:   main.cpp
+ * Author: Tracy Quintos
+ * Created on July 23, 2014, 11:22 AM
+ * Purpose: Homework GaddisChp6Prob7
+ */
 
-//User Libraries
 #include <iostream>
-#include <cmath>
+#include <iomanip>
+
+float cvs (int fahrenheit); // function celcius
+
+const int START_FAH = 0,
+          END_FAH = 20,
+          INCREMENT = 1;
 
 using namespace std;
 
-// global constant starting from Celcius 0 to 20, incrementing by 1
-const int START_CEL = 0,
-        END_CEL = 20,
-        INCREMENT = 1;
-
-//User Libraries
-
-//Global Constant
-
-//Function Prototype
-
-//Execution starts here!
-
 
 /*
-*
-*/
+ * 
+ */
 int main(int argc, char** argv) {
     
-    float celcius; //temperature types given as variables(floats)
-    float fahrenheit; //holds Fahrenheit conversion after calculations
+    float celcius; 
+    cout<<fixed<<showpoint<<setprecision(2);
     
-    for (celcius = START_CEL; celcius <=END_CEL; celcius += INCREMENT)
+    for(int fahrenheit = START_FAH; fahrenheit <= END_FAH; fahrenheit ++)
     {
-         fahrenheit= 1.8 * celcius + 32; // Celcius to Fahrenheit converter
-         
-         cout<<celcius<<" Celcius" << " = "<<fahrenheit<<" Fahrenheit "<<endl;
+        celcius=cvs(fahrenheit);
+        cout<<fahrenheit<<" Fahrenheit"<<" = "<<celcius<<" Celcius"<<endl;
     }
-    
-    
-    //Exit stage right
+
     return 0;
 }
-    
 
-
+float cvs (int fahrenheit)
+{
+    return (static_cast<float>(fahrenheit)-32)*5/9;
+}
