@@ -9,17 +9,24 @@
 #include <iomanip>
 
 
-void kinE (float,float);
+void kinE (float,float); //void function golds kinE (kinetic energy function) and two floats as arguements
 
 using namespace std;
 
+//User Libraries
+
+//Global Constants
+
+//Function Prototype
+
+//Execution starts here!
 /*
  * 
  */
 int main(int argc, char** argv) {
 
-    float mass;
-    float vel;
+    float mass; //holds mass of object
+    float vel; //holds velocity of object
     
     cout<<fixed<<showpoint<<setprecision(2);
     
@@ -29,13 +36,13 @@ int main(int argc, char** argv) {
     cin>>vel;
     kinE(mass,vel);
     
-    
+    //exit stage right
     return 0;
 }
 
 void kinE (float mass, float vel)
 {
-    float ke;
+    float ke; //looking for the value if ke, equation is given by book, and calculation will take place
     ke=0.5*mass*vel*vel;
-    cout<<"The kinetic energy of the object is: "<<ke<<endl;
+    cout<<"The kinetic energy of the object is: "<<ke<<endl; //ke is acquired through function's calculations
 }
