@@ -6,31 +6,39 @@
  */
 
 #include <time.h>
-#include <ctime>
+#include <ctime>//sleep/delay effect
 #include <iostream>
-#include <windows.h>
+#include <windows.h> //sleep/delay effect
  
 using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Function Prototype
+
+//Execution starts here!
 int coinToss();
-float calculateTotal(int number);
+float calculateTotal(int number); //coin tossed function
  
 int main(int argc, char** argv)
 {
-   int number;
-   int head = 0;
-   int tail = 0;
-   int n;
+   int number; 
+   int head = 0; //heads set to 0
+   int tail = 0; //tails set to 0
+   int n; // holds the number of times the coin will be tosssed
    
    cout<<"Please enter the number "<<endl;
    cin>>n;
    
  
-   for(int i = 0; i < n; i++)
+   for(int i = 0; i < n; i++) //for loop statement to increment the number of coin tosses given by user
    {
       number = coinToss();
       if(number == 1)
       {
-        cout<<"HEADS"<<endl;  
+        cout<<"HEADS"<<endl;  //50% chance between heads or tails
      
         head ++;    
       }
@@ -40,12 +48,13 @@ int main(int argc, char** argv)
          
          tail ++;
       }
-       Sleep(800);
+       Sleep(800); //sleep/ delay example is taken from  a website, to demonstrate time between each coin toss
    }
    
-   cout<<"Total # of Heads are: "<<head<<endl;
+   cout<<"Total # of Heads are: "<<head<<endl; //number of heads and tails will be recorded and outputted
    cout<<"Total # of Tails are: "<<tail<<endl;
  
+    //exit stage right
     return 0;
 }
  
