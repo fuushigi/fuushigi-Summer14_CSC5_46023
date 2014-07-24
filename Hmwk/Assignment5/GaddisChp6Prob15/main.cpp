@@ -74,7 +74,8 @@ int main(int argc, char** argv) {
  void cvs (float poP,float bR, float dR, float years)
 {
     
-    poP = poP + bR - dR; 
+    poP = poP + bR - dR;  //***when entering the starting population, it gets outputted as the new population for every year 
+                         
     
   
     
