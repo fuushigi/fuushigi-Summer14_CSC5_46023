@@ -10,6 +10,14 @@
           
 using namespace std;
 
+//User Libraries
+
+//Global Constants
+
+//Function Prototype
+
+//Execution starts here!
+
 void getScore(int &score);
 void calcAverage(int score1, int score2, int score3, int score4, int score5, int lowest);
 int findLowest(int score1, int score2, int score3, int score4, int score5);
@@ -31,6 +39,7 @@ int     score1 = 0, score2 = 0, score3 = 0, score4 = 0, score5 = 0, lowest = 0; 
         //first we will add the scores together and subtract it by the lowest score given 
         //will be averaged out divded by 4
 
+//exit stage right
 return 0;
 }
 void getScore(int &score) //getScore function
