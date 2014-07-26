@@ -40,6 +40,9 @@ int searchList(int list[], int numElems, int value)
 	return position; // Return the position, or -1
 }
 
+/*
+*
+*/
 int main(int argc, char** argv)
 {
 	int tests[arraySize] = {5658845, 450125, 7895122, 8777541, //account numbers given by book, 18 in total
@@ -64,6 +67,7 @@ int main(int argc, char** argv)
 		cout << (results) << ".\n";	
 	}
 	
+        //Exit stage right
 	return 0;
 }
 
