@@ -57,9 +57,7 @@ int main(int argc, char** argv)
 
 	results = searchList(tests, arraySize, accountN);
         
-        
-	
-	if (results == -1)
+        if (results == -1)
 	cout << "The number entered is invalid.\n"; //Displays the number given by user is invalid, instructed by book
 	else
 	{
