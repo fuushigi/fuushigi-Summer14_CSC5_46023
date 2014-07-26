@@ -19,7 +19,7 @@ using namespace std;
 //Execution starts here!
 
 
-int searchList(int [], int, int); //linear search
+int searchList(int [], int, int); //linear search method
 const int arraySize = 18; //constant integer variable setting array size 18, corresponds to the account numbers given by book
 int searchList(int list[], int numElems, int value)
 {
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
 	int accountN = 0; //holds the account numbers
 	int results = 0; //holds what # the account is in the element(inside array))
 	
-        cout<<"Enter a valid Charge Account"<<endl;
+        cout<<"Please enter a valid account #"<<endl;
 	cin >> accountN;
 
 	results = searchList(tests, arraySize, accountN);
@@ -60,7 +60,7 @@ int main(int argc, char** argv)
         
 	
 	if (results == -1)
-	cout << "The number entered is invalid.\n"; //Display the number is invalid, instructed by book
+	cout << "The number entered is invalid.\n"; //Displays the number given by user is invalid, instructed by book
 	else
 	{
 		cout << "The number entered is valid.\n"; //Displays the number is valid, instructed by book	
