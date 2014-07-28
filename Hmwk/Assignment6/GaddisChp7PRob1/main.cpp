@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
- * Author: OWNER-PC
- *
+ * Author: Tracy Quintos
  * Created on July 25, 2014, 3:45 PM
+ * Purpose: Homework GaddisChp7Prob1
  */
 
 //User Libraries
