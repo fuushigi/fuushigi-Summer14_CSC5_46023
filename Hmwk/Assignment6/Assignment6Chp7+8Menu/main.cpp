@@ -21,6 +21,8 @@ using namespace std;
 void con();
 
 
+
+
 const int Numb = 10; //constant set as an integer Num = 10
 
 const int MONKEYS = 3; // number of monkeys
@@ -59,6 +61,8 @@ return position; // Return the position, or -1
 const int LUCKY_NUMS =10; //"lucky" combinations as given by book
 // Function prototype that searches winning ticket number, linear search method
 int ticketSearch(const int [], int, int);
+
+
 
 
 
@@ -379,7 +383,7 @@ cout<<"The lowest sales: "<<LowSell<<" ("<<names[LowName]<<" salsa)\r\n";
                 
                 
               
-
+                con();
                 break;
             }
             case 5:
@@ -411,11 +415,25 @@ cout<<"The lowest sales: "<<LowSell<<" ("<<names[LowName]<<" salsa)\r\n";
                 con();
                 break;
             }
-                 
+            
+            case 6:
+            {
+               cout<<"Problem 5: ";
+                    con(); 
+                   
+                    
+                    
+                    
+                
+             con();
+                break;
+            }
                 case 7:
                 {
                     cout<<"Problem 8";
                     con();
+                    
+                    
                     
                  int x; //holds employee ID number/wages
 int empld[7] = {5658845,4520125,7895122,8777541,8451277,1302850,750489}; //holds the IDs given by book
@@ -620,11 +638,10 @@ void getFood(float arr[][DAYS], int rows) //function to store the
         }
 }
  
-//*******************************************************************
+
 // avgFood function
 // Gets the average food each monkey eats during the week. It
 // will then show a message on the screen.
-//*******************************************************************
 void avgFood(float arr[][DAYS], int rows)
 {
         double total = 0; // accumulator.
@@ -643,11 +660,10 @@ void avgFood(float arr[][DAYS], int rows)
         cout << (total / MONKEYS) << " pounds.\n" << endl;
 }
  
-//*******************************************************************
+
 // leastAmount function
 // Get from each monkey the least amount of food eaten
 // during the week.
-//*******************************************************************
 void leastAmount(float arr[][DAYS], int rows)
 {
         for (int nRows = 0; nRows < rows; nRows++)
@@ -748,4 +764,3 @@ index ++;
 }
 return position;
 }
-
