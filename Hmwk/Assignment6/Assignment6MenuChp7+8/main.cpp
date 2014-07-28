@@ -27,22 +27,16 @@ void readDataFromFile(char arr[][DAYS1], int size); //function for reading in th
 void showMonthlyReport(char arr[][DAYS1], int size); //function to store weather patterns for each month
 void showTotalReport(int rainy, int cloudy, int sunny);//function to allocate in what days were Rainy,cloudy,and sunny
 void monthWithMostRain(char arr[][DAYS1], int size); //function for the month with the largest amount of rain
-
-
 const int Numb = 10; //constant set as an integer Num = 10
-
 const int MONKEYS = 3; // number of monkeys
 const int DAYS = 7; //number of days of the year
-
 void getFood(float arr[][DAYS], int rows); //function for the food each monkey have consumed, 2D array
 void avgFood(float arr[][DAYS], int rows); //function for the average amonut of food between the 3 monkies
 void leastAmount(float arr[][DAYS], int rows); //function for the least amount of food consumed, by which monkey and which day
 void greatestAmount(float arr[][DAYS], int rows); //function for the greatest amount of food consumed by which monkey and which day
-
 const int NUM_QUES = 20;//holds the number of questions that is set to 20, as instructed by book
 const int MIN_COR = 15; //validated by book the student/user must have at least a 15/20 grade to pass
 void checkAnswers(char[], char[], int, int); //void function to check the answers
-
 int searchList(int [], int, int); //linear search method
 const int arraySize = 18; //constant integer variable setting array size 18, corresponds to the account numbers given by book
 int searchList(int list[], int numElems, int value)
@@ -67,11 +61,6 @@ return position; // Return the position, or -1
 const int LUCKY_NUMS =10; //"lucky" combinations as given by book
 // Function prototype that searches winning ticket number, linear search method
 int ticketSearch(const int [], int, int);
-
-
-
-
-
 
 //Global Constants
 
@@ -701,10 +690,8 @@ void leastAmount(float arr[][DAYS], int rows)
         cout << endl;
 }
  
-//*******************************************************************
+
 // greatestAmount function
-//
-//*******************************************************************
 void greatestAmount(float arr[][DAYS], int rows)
 {
         for (int nRows = 0; nRows < rows; nRows++)
