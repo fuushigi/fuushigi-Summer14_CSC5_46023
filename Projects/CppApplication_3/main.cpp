@@ -449,7 +449,7 @@ void questionNine() //function for question 9
     }
 }
 
-void questionTen() //function for question 9
+void questionTen() //function for question 10
 {
     char userInput; //char user input is for the answer the user chooses for question 9
 
@@ -468,124 +468,124 @@ void questionTen() //function for question 9
         { //if user inputs A/a they are correct
             cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(32000);
-            questionEleven();
+            moneyPoint(32000); //answer question 10 correctly user gets $320000
+            questionEleven(); // call next questionFunction() question 11
         }
         else
         {
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);
+            moneyPoint(1000); // $1000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionTen();
+            questionTen();  //if areYouSure() == false question ten will be called
     }
 }
 
-void questionEleven()
+void questionEleven() //function for question 11
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 11
  
     cout << "\n##QUESTION 11 ############################################################\n"; //question 11 title
-    cout << "What is the largest animal on earth ?\n";
-    cout << "A. Blue Whale\t\t\t C. Anaconda\n";
+    cout << "What is the largest animal on earth ?\n"; //question 11 display
+    cout << "A. Blue Whale\t\t\t C. Anaconda\n"; //choose answer A,B,C,D
     cout << "B. African Elephant\t\t D. Giraffe\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'A')
-        {
-            cls (30);
+        if(toupper(userInput) == 'A')  //toupper allows user to use the lowercase or uppercase A/a
+        { //if user inputs A/a they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(64000);
-            questionTwelve();
+            moneyPoint(64000); //answer question 11 correctly user gets $640000
+            questionTwelve(); // call next questionFunction() question 12
         }
         else
         {
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(32000);
+            moneyPoint(32000); // $32000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionEleven();
+            questionEleven(); //if areYouSure() == false question eleven will be called
     }
 }
 
-void questionTwelve()
+void questionTwelve() //function for question 12
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 12
 
     cout << "\n##QUESTION 12 ############################################################\n"; //question 12 title
-    cout << "In what year did the United States adopt its independence ?\n";
-    cout << "A. 1976\t\t\t C. 1476\n";
+    cout << "In what year did the United States adopt its independence ?\n"; //question 12 display
+    cout << "A. 1976\t\t\t C. 1476\n"; //choose answer A,B,C,D
     cout << "B. 1776\t\t\t D. 1876\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n";  //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
-    {
-        if(toupper(userInput) == 'B')
-        {
-            cls (30);
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
+    { //if user inputs B/b they are correct
+        if(toupper(userInput) == 'B') //toupper allows user to use the lowercase or uppercase B/b
+        { //if user inputs B/b they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(125000);
-            questionThirteen();
+            moneyPoint(125000); //answer question 12 correctly user gets $125000
+            questionThirteen(); // call next questionFunction() question 13
         }
         else
         {
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(32000);
+            moneyPoint(32000);  // $32000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionTwelve();
+            questionTwelve(); //if areYouSure() == false question twelve will be called
     }
 }
 
-void questionThirteen()
+void questionThirteen() //function for question 13
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 12
 
     cout << "\n##QUESTION 13 ############################################################\n"; //question 13 title
-    cout << "What country today was ancient Babylonia ?\n";
-    cout << "A. Iran\t\t\t C. Iraq\n";
+    cout << "What country today was ancient Babylonia ?\n"; //question 13 display
+    cout << "A. Iran\t\t\t C. Iraq\n"; //choose answer A,B,C,D
     cout << "B. Istanbul\t\t D. Poland\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'C')
+        if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
         {
-            cls (30);
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(250000);
-            questionFourteen();
+            moneyPoint(250000);  //answer question 12 correctly user gets $250000
+            questionFourteen(); // call next questionFunction() question 14
         }
         else
         {
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(32000);
+            moneyPoint(32000); // $32000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionThirteen();
+            questionThirteen(); //if areYouSure() == false question thirteen will be called
     }
 }
 
