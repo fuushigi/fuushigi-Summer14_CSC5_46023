@@ -556,7 +556,7 @@ void questionTwelve() //function for question 12
 
 void questionThirteen() //function for question 13
 {
-    char userInput; //char user input is for the answer the user chooses for question 12
+    char userInput; //char user input is for the answer the user chooses for question 13
 
     cout << "\n##QUESTION 13 ############################################################\n"; //question 13 title
     cout << "What country today was ancient Babylonia ?\n"; //question 13 display
@@ -570,7 +570,7 @@ void questionThirteen() //function for question 13
     if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
         if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
-        {
+        { //if user inputs C/c they are correct
             cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
             moneyPoint(250000);  //answer question 12 correctly user gets $250000
@@ -589,74 +589,74 @@ void questionThirteen() //function for question 13
     }
 }
 
-void questionFourteen()
+void questionFourteen() //function for question 14
 {
-    char userInput;
+    char userInput;  //char user input is for the answer the user chooses for question 14
 
     cout << "\n##QUESTION 14 ############################################################\n"; //question 14 title
-    cout << "How many seconds are in 2 minutes? ?\n";
-    cout << "A. 180 \t\t\t C. 120\n";
+    cout << "How many seconds are in 2 minutes? ?\n"; //question 14 display
+    cout << "A. 180 \t\t\t C. 120\n"; //choose answer A,B,C,D
     cout << "B. 450 \t\t\t D. 240\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'C')
-        {
-            cls (30);
+        if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
+        {//if user inputs C/c they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(500000);
-            questionFifteen();
+            moneyPoint(500000); //answer question 12 correctly user gets $500000
+            questionFifteen(); // call next questionFunction() question 15
         }
         else
         {
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(32000);
+            moneyPoint(32000); // $32000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionFourteen();
+            questionFourteen(); //if areYouSure() == false question fourteen will be called
     }
 }
 
-void questionFifteen()
+void questionFifteen() //function for question 15
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 15
 
     cout << "\n##QUESTION 15 ############################################################\n"; //question 15 title
-    cout << "What is the boiling point of water ?\n";
-    cout << "A. 101 F\t\t\t C. 198 F\n";
+    cout << "What is the boiling point of water ?\n"; //question 15 display
+    cout << "A. 101 F\t\t\t C. 198 F\n"; //choose answer A,B,C,D
     cout << "B. 212 F\t\t\t D. 72 C\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'B')
+        if(toupper(userInput) == 'B')  //toupper allows user to use the lowercase or uppercase B/b
         {
-            cls (30);
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(1000000);
+            moneyPoint(1000000);  //answer question 12 correctly user gets $1000000
             //char bonusInput;
             cout << "WOULD YOU LIKE TO ENTER BONUS ROUND\n";
             //cin >> bonusInput;
             // if user is sure?
-            if(areYouSure() == true)
+            if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
             {
-                bonusAb();
+                bonusAb(); //if true, bonusAb function is called and bonus round begins
             }
             else
             {
-                cls (30);
-                cout << "NICE TRY, WE'LL DO IT ANYWAY! =)\n";
-                bonusAb();
+                cls (30); // pseudo clear screen after the correct answer is given
+                cout << "NICE TRY, WE'LL DO IT ANYWAY! =)\n"; //trick question, either answer will still call bonusAb function
+                bonusAb(); //bonusAb "bonus round" function
             }
            
         }
@@ -664,17 +664,17 @@ void questionFifteen()
     }
 	else
 	{
-	questionFifteen();
+	questionFifteen(); //if areYouSure() == false question fifteen will be called
 	}
 }
 
-void bonusAb()
+void bonusAb() //bonusAb function,
 {
     ofstream outputFile;
 
-outputFile.open("callsign.txt");
+outputFile.open("callsign.txt"); //outputs file to "callsign.txt"
     
-string mpaUserInput[2][5] = {
+string mpaUserInput[2][5] = { //using 2D Array, 2 Rows, 5 Columns
 {"ROW0 COL0","ROW0 COL1","ROW0 COL2","ROW0 COL3","ROW0 COL4"},
 {"ROW1 COL0","ROW1 COL1","ROW1 COL2","ROW1 COL3","ROW1 COL4"}
 };
@@ -695,9 +695,9 @@ cout << endl;
 */
 
     cout << "\n##BONUS QUESTION ##########################################################\n"; // bonus question title
-    cout << "WHAT IS THE FIRST TEN MILITARY PHONETIC ALPHABETS ?\n";
+    cout << "WHAT IS THE FIRST TEN MILITARY PHONETIC ALPHABETS ?\n"; //bonus question
     cout << "##########################################################################\n";
-    cout << "ENTER PHONETIC ABCDEFGHIJ: " << endl;
+    cout << "ENTER PHONETIC ABCDEFGHIJ: " << endl;//bonus question prompt
 // CIN
 for(int row = 0; row < 2; row++)
 {
@@ -727,14 +727,14 @@ for(int i = 0; i < mpaUserInput[0][col].length(); i++)
 //i.e. is ALFA the same as ALPHA? if yes, CORRECT else, WRONG
 if(mpaUserInput[0][col] == mpa1[col])
 {
-cout << "CORRECT!" << endl;
+cout << "CORRECT!" << endl; //validates in column the correct MPA
 }
 else
 {
-cout << "WRONG!!!" << endl;
+cout << "WRONG!!!" << endl; //validates in column the wrong MPA
 }
 }
-cout << endl;
+cout << endl; //cout<<endl;
 
 //VALIDATING ROW 2
 cout << "VALIDATING ROW 2: "<< endl;
