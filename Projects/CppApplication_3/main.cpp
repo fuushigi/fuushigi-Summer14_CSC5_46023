@@ -134,8 +134,9 @@ nameFile.open("RULES.txt"); //opens file "RULES.txt"(will be placed in same dest
 // template function for questions/comments
 void questionOne() //function for question 1
 {
-    char userInput; //char user input is for the answer the user chooses for question 1
     cls (30); //pseudo clear screen after every user input/ answer. 30 line gap
+	char userInput; //char user input is for the answer the user chooses for question 1
+    
 
     cout << "\n##QUESTION 1 #############################################\n"; //question 1 title
     cout << "In what year was RCC established ?\n"; //question 1 display
