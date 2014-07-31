@@ -41,11 +41,11 @@ void questionThirteen(); //void function for question 13
 void questionFourteen(); //void function for question 14
 void questionFifteen(); //void function for question 15
 
-bool areYouSure(); //
+bool areYouSure(); //is this your final answer function
 void moneyPoint(int); //void function for moneypoint/money prize
 int searchList(int [], int, int); //linear search for user ID #
 void cls (int); //pseudo clear screen, int for spaces
-void bonusAb(); //
+void bonusAb(); //bonus question function
 
 int main(int argc, char** argv)
 {
@@ -111,7 +111,7 @@ nameFile.open("RULES.txt"); //opens file "RULES.txt"(will be placed in same dest
     {
     cout<<input<<endl;
 
-    getline(nameFile,input);
+    getline(nameFile,input); //getline gets the from the namefils it's input which holds the rules to the game
     }
 
     nameFile.close(); //file close after opening txt
@@ -165,7 +165,7 @@ void questionOne() //function for question 1
     }
 	else
 	{
-		questionOne();
+		questionOne();//if areYouSure() == false question one will be called
 	}
 } 
 
@@ -186,7 +186,7 @@ void questionTwo() //function for question 2
     {
         if(toupper(userInput) == 'B')//toupper allows user to use the lowercase or uppercase B/b
         { //if user inputs B/b they are correct
-cls (30); // pseudo clear screen after the correct answer is given
+			cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n"; // if right answer give moneyPoints(value)
             moneyPoint(200); //answer question 1 correctly user gets $200
             questionThree(); // call next questionFunction() question 3
@@ -200,239 +200,236 @@ cls (30); // pseudo clear screen after the correct answer is given
     }
     else
     {
-            questionTwo(); //else statement if answer is incorrect question 2 function will be called
+            questionTwo(); //if areYouSure() == false question two will be called
     }
 }
 
-void questionThree()
+void questionThree() //function for question 3
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 3
 
-
-    //clear screen here if it works
-    //system("CLS");
     cout << "\n##QUESTION 3 ####################################################\n"; //question 3 title
-    cout << "Who was the 26th U.S. President ?\n";
-    cout << "A. Grover Cleveland\t\t\t C. Theodore Roosevelt\n";
+    cout << "Who was the 26th U.S. President ?\n"; //question 3 display
+    cout << "A. Grover Cleveland\t\t\t C. Theodore Roosevelt\n"; //choose answer A,B,C,D
     cout << "B. William McKinley\t\t\t D. Harry Truman\n";
     cout << "#################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput;//cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'C')
+        if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
         {
-cls (30);
-            cout << "YOU ARE CORRECT!\n";
-            moneyPoint(300);
-            questionFour();
+			cls (30); // pseudo clear screen after the correct answer is given
+            cout << "YOU ARE CORRECT!\n"; // if right answer give moneyPoints(value)
+            moneyPoint(300); //answer question 1 correctly user gets $300
+            questionFour(); //call next questionFunction() question 4
         }
-        else
-        {
+        else //else statement for wrong answer
+        { //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(0);
+            moneyPoint(0); // $0 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionThree();
+            questionThree(); //if areYouSure() == false question three will be called
     }
 }
 
 void questionFour()
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 4
 
     cout << "\n##QUESTION 4 #############################################\n"; //question 4 title
-    cout << "What element in the periodic represents PO ?\n";
-    cout << "A. Polonium\t\t\t C. Cobalt\n";
+    cout << "What element in the periodic represents PO ?\n";  //question 4 display
+    cout << "A. Polonium\t\t\t C. Cobalt\n"; //choose answer A,B,C,D
     cout << "B. Oxygen\t\t\t D. Radon\n";
     cout << "##########################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
-    {
-        if(toupper(userInput) == 'A')
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
+    { //if user inputs A/a they are correct
+        if(toupper(userInput) == 'A') //toupper allows user to use the lowercase or uppercase A/a
         {
-            cls (30);
-cout << "YOU ARE CORRECT!\n";
-            moneyPoint(500);
-            questionFive();
+            cls (30); // pseudo clear screen after the correct answer is given
+			cout << "YOU ARE CORRECT!\n";
+            moneyPoint(500); //answer question 1 correctly user gets $500
+            questionFive(); // call next questionFunction() question 5
         }
-        else
-        {
+        else //else statement for wrong answer
+        { //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(0);
+            moneyPoint(0); // $0 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionFour();
+            questionFour(); //if areYouSure() == false question four will be called
     }
 }
 
-void questionFive()
+void questionFive() //function for question 5
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 5
 
     cout << "\n##QUESTION 5 ##################################################\n"; //question 5 title
-    cout << "What is the class code for the c++ progamming morning session ?\n";
-    cout << "A. 47023\t\t\t C. 46023\n";
+    cout << "What is the class code for the c++ progamming morning session ?\n"; //question 5 display
+    cout << "A. 47023\t\t\t C. 46023\n"; //choose answer A,B,C,D
     cout << "B. 92577\t\t\t D. 741808\n";
     cout << "###############################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'C')
-        {
-            cls (30);
-            cout << "YOU ARE CORRECT!\n";
-            moneyPoint(1000);
-            questionSix();
+        if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
+        { //if user inputs A/a they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
+            cout << "YOU ARE CORRECT!\n"; // if right answer give moneyPoints(value)
+            moneyPoint(1000); //answer question 1 correctly user gets $100
+            questionSix(); // call next questionFunction() question 5
         }
-        else
-        {
+        else //else statement for wrong answer
+        { //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);
+            moneyPoint(1000); // $1000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionFive();
+            questionFive(); //if areYouSure() == false question five will be called
     }
 }
 
-void questionSix()
+void questionSix() //function for question 6
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 1
 
     cout << "\n##QUESTION 6 ##################################################\n"; //question 6 title
-    cout << "In what year was the first manned mission to land on the moon ?\n";
-    cout << "A. 1920\t\t\t C. 2011\n";
+    cout << "In what year was the first manned mission to land on the moon ?\n"; //question 6 display
+    cout << "A. 1920\t\t\t C. 2011\n"; //choose answer A,B,C,D
     cout << "B. 1969\t\t\t D. 1972\n";
     cout << "###############################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'B')
-        {
-            cls (30);
-cout << "YOU ARE CORRECT!\n";
-            moneyPoint(2000);
-            questionSeven();
+        if(toupper(userInput) == 'B') //toupper allows user to use the lowercase or uppercase B/b
+        {  //if user inputs A/a they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
+			cout << "YOU ARE CORRECT!\n"; // if right answer give moneyPoints(value)
+            moneyPoint(2000);  //answer question 1 correctly user gets $2000
+            questionSeven(); // call next questionFunction() question 6
         }
-        else
-        {
+        else //else statement for wrong answer
+        {  //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);
+            moneyPoint(1000);  // $0 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionSix();
+            questionSix();  questionFive(); //if areYouSure() == false question six will be called
     }
 }
 
-void questionSeven()
+void questionSeven() //function for question 7
 {
-    char userInput;
+    char userInput;//char user input is for the answer the user chooses for question 7
 
     cout << "\n##QUESTION 7 ##########################################################\n"; //question 7 title
-    cout << "Other than 'Global Variables', what is the sure way to fail the class ?\n";
-    cout << "A. Using 'doubles'\t\t\t C. Using 'global constants' \n";
+    cout << "Other than 'Global Variables', what is the sure way to fail the class ?\n"; //question 7 display
+    cout << "A. Using 'doubles'\t\t\t C. Using 'global constants' \n";//choose answer A,B,C,D
     cout << "B. Using 'shorts'\t\t\t D. Using 'do-while'\n";
     cout << "#######################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'A')
-        {
-            cls (30);
-cout << "YOU ARE CORRECT!\n";
-            moneyPoint(4000);
-            questionEight();
+        if(toupper(userInput) == 'A') //toupper allows user to use the lowercase or uppercase A/a
+        { //if user inputs A/a they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
+			cout << "YOU ARE CORRECT!\n"; // if right answer give moneyPoints(value)
+            moneyPoint(4000); //answer question 1 correctly user gets $4000
+            questionEight();  // call next questionFunction() question 7
         }
-        else
-        {
+        else  //else statement for wrong answer
+        { //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);
+            moneyPoint(1000);  // $1000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionSeven();
+            questionSeven(); //if areYouSure() == false question seven will be called
     }
 }
 
-void questionEight()
+void questionEight() //function for question 8
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 1
 
     cout << "\n##QUESTION 8 ############################################################\n"; //question 8 title
-    cout << "How many pieces are in the game of chess per side ?\n";
-    cout << "A. 15\t\t\t C. 16\n";
+    cout << "How many pieces are in the game of chess per side ?\n"; //question 8 display
+    cout << "A. 15\t\t\t C. 16\n"; //choose answer A,B,C,D
     cout << "B. 17\t\t\t D. 18\n";
     cout << "##########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) //if statement, IS THAT YOUR FINAL ANSWER? (yes/ no) function inside if
     {
-        if(toupper(userInput) == 'C')
-        {
-            cls (30);
+        if(toupper(userInput) == 'C') //toupper allows user to use the lowercase or uppercase C/c
+        { //if user inputs A/a they are correct
+            cls (30); // pseudo clear screen after the correct answer is given
             cout << "YOU ARE CORRECT!\n";
-            moneyPoint(8000);
-            questionNine();
+            moneyPoint(8000); //answer question 1 correctly user gets $8000
+            questionNine(); // call next questionFunction() question 8
         }
-        else
-        {
+        else //else statement for wrong answer
+        {   //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);
+            moneyPoint(1000); // $1000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionEight();
+            questionEight(); //if areYouSure() == false question seven will be called
     }
 }
 
-void questionNine()
+void questionNine() //function for question 9
 {
-    char userInput;
+    char userInput; //char user input is for the answer the user chooses for question 9
    
     cout << "\n##QUESTION 9 ############################################################\n"; //question 9 title
-    cout << "As of 2012 what is the estimated world population ?\n";
-    cout << "A. 7 Billion\t\t\t C. 3 Billion\n";
+    cout << "As of 2012 what is the estimated world population ?\n"; //question 9 display
+    cout << "A. 7 Billion\t\t\t C. 3 Billion\n"; //choose answer A,B,C,D
     cout << "B. 5 Billion\t\t\t D. 9 Billion\n";
     cout << "#########################################################################\n";
-    cout << "YOUR ANSWER IS: \n";
-    cin >> userInput;
+    cout << "YOUR ANSWER IS: \n"; //user answer is:
+    cin >> userInput; //cin >> user's selected answer
   
     // if user is sure?
-    if(areYouSure() == true)
+    if(areYouSure() == true) 
     {
-        if(toupper(userInput) == 'A')
+        if(toupper(userInput) == 'A') //toupper allows user to use the lowercase or uppercase A/a
         {
             cls (30);
             cout << "YOU ARE CORRECT!\n";
