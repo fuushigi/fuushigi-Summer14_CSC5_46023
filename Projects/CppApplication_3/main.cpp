@@ -75,7 +75,6 @@ return 0;
 void mainMenu() //void main menu function
 {
     int choice; //holds the choices for menu
-    int n; //forgot if needed
     
     ifstream nameFile; //ifstream namefile to read the RULES.txt
     string input; //string input, inputs the rules from txt onto console
@@ -770,13 +769,13 @@ outputFile << "\r\n";
 }
 
 // Revalidate Question
-bool areYouSure()
+bool areYouSure() //areYouSure function= called for every question
 {
-    char rysChar;
-    cout << "IS THAT YOUR FINAL ANSWER?(Y/n): ";
-    cin >> rysChar;
+    char rysChar; //char holds the (Y/n) reply
+    cout << "IS THAT YOUR FINAL ANSWER?(Y/n): ";// function msg
+    cin >> rysChar; //user's input  (Y/n)
     
-    if(toupper(rysChar) == 'Y')
+    if(toupper(rysChar) == 'Y') //toupper rysChar can either be Y/y
     {
         //test for return: comment out cout
         //cout << "return true\n";
@@ -785,25 +784,25 @@ bool areYouSure()
     else
     {
         
-        return false;
+        return false; //returns false
     }
 }
 
-void moneyPoint(int value)
+void moneyPoint(int value) //moneyPoint function used for every question
 {
-    int money = value;
-    cout << "\nYOU HAVE EARNED: $" << money << endl;
+    int money = value; //int money holds the given value for the 15 questions
+    cout << "\nYOU HAVE EARNED: $" << money << endl; //output for money earned
 }
 
-void cls (int n)
+void cls (int n) //psuedo clear screen function
 {
-for (int i = 1;i<n;i++)
+for (int i = 1;i<n;i++) //n holds the variable to determine how many spaces are used
         {
-cout<<endl;
+cout<<endl; //cout<<endl;
         }
 }
 
- //constant integer variable setting array size 18, corresponds to the account numbers given by book
+//constant integer variable setting array size 2, corresponds to the ID #s for linear search
 int searchList(int list[], int numElems, int value)
 {
 int index = 0; //subscript to search array
