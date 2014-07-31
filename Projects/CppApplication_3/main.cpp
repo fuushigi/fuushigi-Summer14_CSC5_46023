@@ -80,9 +80,9 @@ void mainMenu() //void main menu function
     string input; //string input, inputs the rules from txt onto console
     
     cout << "******************************************\n"; //Opening title if void function main menu is opened
-    cout << "*\t\tWHO WANTS *\n";
-    cout << "*\t\t TO BE A *\n";
-    cout << "*\t\tMILLIONAIRE *\n";
+    cout << "*\t\tWHO WANTS		 *\n";
+    cout << "*\t\t TO BE A		 *\n";
+    cout << "*\t\tMILLIONAIRE		 *\n";
     cout << "******************************************\n";
     
     cout<<"1. START GAME\n"; //choice 1 allows player to start the game
