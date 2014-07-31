@@ -334,13 +334,13 @@ void questionSix() //function for question 6
         else //else statement for wrong answer
         {  //cout WRONG ANSWER, GAME OVER, THANKS FOR PLAYING
             cout << "WRONG ANSWER! GAME OVER. THANKS FOR PLAYING!\n";
-            moneyPoint(1000);  // $0 will be given if answer is wrong
+            moneyPoint(1000);  // $1000 will be given if answer is wrong
         }
             
     }
     else
     {
-            questionSix();  questionFive(); //if areYouSure() == false question six will be called
+            questionSix(); //if areYouSure() == false question six will be called
     }
 }
 
@@ -381,7 +381,7 @@ void questionSeven() //function for question 7
 
 void questionEight() //function for question 8
 {
-    char userInput; //char user input is for the answer the user chooses for question 1
+    char userInput; //char user input is for the answer the user chooses for question 8
 
     cout << "\n##QUESTION 8 ############################################################\n"; //question 8 title
     cout << "How many pieces are in the game of chess per side ?\n"; //question 8 display
