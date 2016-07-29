@@ -25,6 +25,8 @@ int main(int argc, char** argv)
     total = num1 + num2;
     
     cout<<"The sum of the total is: "<<total<<endl;
+
+   //Github Testing 7/29/16
     
     return 0;
  
