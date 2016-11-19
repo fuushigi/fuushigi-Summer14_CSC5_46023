@@ -18,12 +18,11 @@ const float F_PERCENTAGE = 0.62f;
 int main(int argc, char** argv) {
 	
 	
-	float f_totalSale = 4.6e6f;
-	float f_percentage = 0.62f;
+	float f_totalSale = 4.6e6f,
+	 	  f_percentage = 0.62f;
 	double total;
 	
 	total = f_totalSale * F_PERCENTAGE;
-	
 	
 	cout << "The East Coast division will generate about $" << setprecision(7)
 	<< total << " this year" << endl;
