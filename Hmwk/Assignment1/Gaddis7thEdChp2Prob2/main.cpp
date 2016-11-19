@@ -17,17 +17,17 @@ const float F_PERCENTAGE = 0.62f;
  
 int main(int argc, char** argv) {
 	
-	system("color e3");
+	system("color c0");
 	
-	float f_totalSale = 4.6e6f,
-	 	  f_percentage = 0.62f;
-	double total;
+	float f_totalSale = 4.6e6f, //$4.6 million
+	 	f_percentage = 0.62f;   //The East Coast sales division of a company generates 62 percent of total sales.
+	double total;				//total for generate
 	
-	total = f_totalSale * F_PERCENTAGE;
+	total = f_totalSale * F_PERCENTAGE; // equation 62% of 4600000 = total
 	
 	cout << "The East Coast division will generate about $" << setprecision(7)
-	<< total << " this year." << endl;
+	<< total << " this year.\n" << endl;
  
-	system("PAUSE");
+system("PAUSE");
     return 0;
 }
