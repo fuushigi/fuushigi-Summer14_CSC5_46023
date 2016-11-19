@@ -29,6 +29,5 @@ int main(int argc, char** argv) {
 	<< total << " this year" << endl;
  
 	
-    
     return 0;
 }
