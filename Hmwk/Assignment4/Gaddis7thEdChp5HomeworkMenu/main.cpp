@@ -29,9 +29,13 @@ void problem7();
 void problem8();
 void problem9();
 void problem10();
+void problem11();
+
 
 //Execution begins here
 int main(int argv,char *argc[]){
+	
+	system("color f4");
     int inN;
     do{
         Menu();
@@ -47,9 +51,10 @@ int main(int argv,char *argc[]){
         case 8: problem8();break;
         case 9: problem9();break;
         case 10:problem10();break;
+        case 11:problem11();break;
             default:;
         };
-    }while(inN<10);
+    }while(inN<12);
     return 0;
 }
 
@@ -69,7 +74,8 @@ void Menu(){
     cout<<"Type 8 for problem 4"<<endl;
     cout<<"Type 9 for problem 5"<<endl;
     cout<<"Type 10 for problem 6"<<endl;
-    cout<<"Type 11 to exit \n"<<endl;
+    cout<<"Type 11 for problem 10"<<endl;
+    cout<<"Type 12 to exit \n"<<endl;
 }
 
 //Choose problem number function
@@ -452,6 +458,54 @@ cout<< " " <<count<< "\t\t" <<speed*count<<endl;
 }
 
 }
+
+void problem11(){
+	system("color a3");
+
+	//Variable Declaration Statements
+
+	//Overview Statement
+	cout << "The purpose of this program is to use nested loops to display number of months,\n";
+	cout << "total inches of rainfall, and average rainfall.\n";
+
+	//Input
+
+	int yearsEntered = 1; //To hold yearsEntered
+	int monthsEntered; //To hold monthsEntered
+	double rainfallTotal; //To hold total rainfall
+	double rainfallMonth; //To hold monthly rainfall
+	double rainfallAverage; //To hold average rainfall
+	
+	
+	cout << "Enter the number of years: ";
+
+	for (int years = 0; years < yearsEntered; years++)
+	{
+		
+		cin >> yearsEntered;
+		monthsEntered = yearsEntered * 12;
+		rainfallTotal = 0; //Initialize the accumulator
+
+		for (int months = 1; months <= monthsEntered; months++)
+		{
+			cout << "Enter the rainfall in inches for month " << months << ": ";
+			cin >> rainfallMonth;
+			rainfallTotal += rainfallMonth;
+		}
+
+	//Set the numeric output formatting
+	cout << fixed << setprecision(2);
+
+	//Display output
+	rainfallAverage = rainfallTotal / monthsEntered;
+	cout << "\nNumber of months: " << monthsEntered << endl;
+	cout << "Total inches of rainfall: " << rainfallTotal << endl;
+	cout << "Average rainfall: " << rainfallAverage << endl << endl;
+
+	}
+}
+
+
 //Exit Comment
 void def(int inN){
     cout<<"You typed "<<inN<<" to exit the program"<<endl;
